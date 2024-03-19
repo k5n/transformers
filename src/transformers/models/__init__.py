@@ -214,6 +214,7 @@ from . import (
     swin,
     swin2sr,
     swinv2,
+    efficientvit_mit,
     switch_transformers,
     t5,
     table_transformer,

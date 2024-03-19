@@ -826,6 +826,7 @@ _import_structure = {
     "models.swin": ["SWIN_PRETRAINED_CONFIG_ARCHIVE_MAP", "SwinConfig"],
     "models.swin2sr": ["SWIN2SR_PRETRAINED_CONFIG_ARCHIVE_MAP", "Swin2SRConfig"],
     "models.swinv2": ["SWINV2_PRETRAINED_CONFIG_ARCHIVE_MAP", "Swinv2Config"],
+    "models.efficientvit_mit": ["EFFICIENTVIT_MIT_PRETRAINED_CONFIG_ARCHIVE_MAP", "EfficientVitMitConfig"],
     "models.switch_transformers": [
         "SWITCH_TRANSFORMERS_PRETRAINED_CONFIG_ARCHIVE_MAP",
         "SwitchTransformersConfig",
@@ -3372,6 +3373,14 @@ else:
             "Swinv2PreTrainedModel",
         ]
     )
+    _import_structure["models.efficientvit_mit"].extend(
+        [
+            "EFFICIENTVIT_MIT_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "EfficientVitMitForImageClassification",
+            "EfficientVitMitModel",
+            "EfficientVitMitPreTrainedModel",
+        ]
+    )
     _import_structure["models.switch_transformers"].extend(
         [
             "SWITCH_TRANSFORMERS_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -5263,6 +5272,7 @@ if TYPE_CHECKING:
         EFFICIENTNET_PRETRAINED_CONFIG_ARCHIVE_MAP,
         EfficientNetConfig,
     )
+    from .models.efficientvit_mit import EFFICIENTVIT_MIT_PRETRAINED_CONFIG_ARCHIVE_MAP, EfficientVitMitConfig
     from .models.electra import (
         ELECTRA_PRETRAINED_CONFIG_ARCHIVE_MAP,
         ElectraConfig,
@@ -6837,6 +6847,12 @@ if TYPE_CHECKING:
             EfficientNetForImageClassification,
             EfficientNetModel,
             EfficientNetPreTrainedModel,
+        )
+        from .models.efficientvit_mit import (
+            EFFICIENTVIT_MIT_PRETRAINED_MODEL_ARCHIVE_LIST,
+            EfficientVitMitForImageClassification,
+            EfficientVitMitModel,
+            EfficientVitMitPreTrainedModel,
         )
         from .models.electra import (
             ELECTRA_PRETRAINED_MODEL_ARCHIVE_LIST,

@@ -63,6 +63,7 @@ IMAGE_PROCESSOR_MAPPING_NAMES = OrderedDict(
         ("dpt", "DPTImageProcessor"),
         ("efficientformer", "EfficientFormerImageProcessor"),
         ("efficientnet", "EfficientNetImageProcessor"),
+        ("efficientvit_mit", "EfficientNetImageProcessor"),
         ("flava", "FlavaImageProcessor"),
         ("focalnet", "BitImageProcessor"),
         ("fuyu", "FuyuImageProcessor"),
